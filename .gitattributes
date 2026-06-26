@@ -1,0 +1,5 @@
+# 安装脚本换行符跨平台锁定
+*.sh   text eol=lf
+install.ps1 -text
+# 其余文本按各自平台
+*.md   text
