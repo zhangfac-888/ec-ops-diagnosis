@@ -1,4 +1,4 @@
-# 电商运营诊断 Skill v1.1.1
+# 电商运营诊断 Skill v1.2.0
 
 > 一个入口走完电商运营全链路诊断：**主图 → 详情页 → 人群 → 数据 → 运营策略**。
 >
@@ -18,7 +18,25 @@
 
 ## 安装
 
-### Claude Code（推荐）
+### 一键安装（CLI · 推荐）
+
+解压后，在该文件夹里跑一条命令，自动装进 Claude Code 的 skills 目录：
+
+- **Windows**：在文件夹里打开 PowerShell，运行
+  ```
+  powershell -ExecutionPolicy Bypass -File .\install.ps1
+  ```
+- **macOS / Linux**：
+  ```
+  bash install.sh
+  ```
+
+装好后重启 Claude Code，说「跑电商运营诊断」即可。
+
+> 有私库访问权的，也能一条龙克隆+安装：
+> `gh repo clone zhangfac-888/ec-ops-diagnosis && cd ec-ops-diagnosis && bash install.sh`（Windows 把末尾换成 `powershell -ExecutionPolicy Bypass -File .\install.ps1`）
+
+### 手动安装（Claude Code）
 
 1. 解压整个文件夹到 `~/.claude/skills/电商运营诊断/`（保持 `子技能/`、`references/` 子目录结构别拆散）。
 2. 重启 Claude Code。触发词：「电商运营诊断 / 给我的产品做体检 / 主图行不行 / 详情页诊断 / 谁会买 / 这堆数据怎么读 / 接下来打什么」。
@@ -89,6 +107,8 @@
 ├── SKILL.md                  # 总编排入口（必读，先读它）
 ├── README.md                 # 本文件
 ├── LICENSE.txt               # 使用许可
+├── install.ps1               # 一键安装（Windows）
+├── install.sh                # 一键安装（macOS/Linux）
 ├── agents/
 │   └── openai.yaml           # Codex/扣子 上传用，一句话唤起
 ├── references/
