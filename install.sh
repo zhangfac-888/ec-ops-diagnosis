@@ -10,11 +10,20 @@ echo "正在安装「$SKILL」Skill ..."
 mkdir -p "$DEST"
 
 if command -v rsync >/dev/null 2>&1; then
-  rsync -a --exclude install.sh --exclude install.ps1 --exclude '.git' --exclude '.gitignore' "$SRC"/ "$DEST"/
+  rsync -a --delete \
+    --exclude install.sh --exclude install.ps1 \
+    --exclude install-remote.sh --exclude install-remote.ps1 \
+    --exclude bin --exclude node_modules \
+    --exclude package.json --exclude package-lock.json \
+    --exclude '.git' --exclude '.gitignore' --exclude '.gitattributes' \
+    "$SRC"/ "$DEST"/
 else
   cp -R "$SRC"/. "$DEST"/
-  rm -f "$DEST/install.sh" "$DEST/install.ps1"
-  rm -rf "$DEST/.git" "$DEST/.gitignore"
+  rm -f "$DEST"/install.sh "$DEST"/install.ps1 \
+        "$DEST"/install-remote.sh "$DEST"/install-remote.ps1 \
+        "$DEST"/package.json "$DEST"/package-lock.json \
+        "$DEST"/.gitignore "$DEST"/.gitattributes
+  rm -rf "$DEST"/bin "$DEST"/node_modules "$DEST"/.git
 fi
 
 echo "✅ 已安装到：$DEST"

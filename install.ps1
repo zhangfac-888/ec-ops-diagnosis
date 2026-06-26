@@ -7,10 +7,16 @@ $src   = $PSScriptRoot
 $dest  = Join-Path $HOME ".claude\skills\$skill"
 
 Write-Host "正在安装「$skill」Skill ..." -ForegroundColor Cyan
+# 覆盖式安装：先清空旧目录，避免上个版本删掉的文件残留
+if (Test-Path -LiteralPath $dest) { Remove-Item -LiteralPath $dest -Recurse -Force }
 New-Item -ItemType Directory -Force $dest | Out-Null
 
-# 复制 skill 全部内容，排除安装脚本与 git 元数据
-$exclude = @("install.ps1", "install.sh", ".git", ".gitignore")
+# 复制 skill 全部内容，排除安装脚本、包元数据与 git 元数据
+$exclude = @(
+  "install.ps1", "install.sh", "install-remote.ps1", "install-remote.sh",
+  "bin", "node_modules", "package.json", "package-lock.json",
+  ".git", ".gitignore", ".gitattributes"
+)
 Get-ChildItem -LiteralPath $src -Force |
   Where-Object { $exclude -notcontains $_.Name } |
   ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $dest -Recurse -Force }

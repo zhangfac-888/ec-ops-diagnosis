@@ -1,0 +1,35 @@
+{
+  "name": "ec-ops-diagnosis",
+  "version": "1.3.0",
+  "description": "电商运营诊断 Skill 安装器：主图/详情页/人群/数据/运营策略 五段总编排诊断，一条命令装进 Claude Code 的 skills 目录。",
+  "bin": {
+    "ec-ops-diagnosis": "bin/cli.js"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=16.7.0"
+  },
+  "files": [
+    "bin/",
+    "SKILL.md",
+    "README.md",
+    "LICENSE.txt",
+    "agents/",
+    "references/",
+    "子技能/"
+  ],
+  "keywords": [
+    "ecommerce",
+    "claude",
+    "claude-code",
+    "skill",
+    "电商",
+    "运营诊断"
+  ],
+  "author": "张发财",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangfac-888/ec-ops-diagnosis.git"
+  }
+}

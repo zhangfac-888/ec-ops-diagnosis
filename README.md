@@ -18,7 +18,22 @@
 
 ## 安装
 
-### 🚀 一行命令安装（推荐 · 无需 git/手动解压）
+### ⚡ npx 一句话安装（推荐 · 跨平台 · 需 Node ≥16.7）
+
+装了 Node 的话，一条命令搞定，Windows/mac/Linux 通用：
+
+```
+npx ec-ops-diagnosis
+```
+
+> 还没发布到 npm 时，可直接从 GitHub 装（效果相同）：
+> ```
+> npx github:zhangfac-888/ec-ops-diagnosis
+> ```
+
+它会把 skill 装进 `~/.claude/skills/电商运营诊断/`（覆盖式安装，自动清掉旧版本残留文件）。加 `--dry-run` 可先预览要装哪些文件。
+
+### 🚀 一行命令安装（无 Node 也能用）
 
 复制一条命令，直接下载并装进 Claude Code 的 skills 目录：
 
@@ -105,13 +120,13 @@
 
 ## 文件结构
 
+> 注：安装脚本与包元数据（`bin/`、`package.json`、`install*.sh/ps1`）不会被装进 skill 目录，下面只列装进去的内容。
+
 ```
 电商运营诊断/
 ├── SKILL.md                  # 总编排入口（必读，先读它）
 ├── README.md                 # 本文件
 ├── LICENSE.txt               # 使用许可
-├── install.ps1               # 一键安装（Windows）
-├── install.sh                # 一键安装（macOS/Linux）
 ├── agents/
 │   └── openai.yaml           # Codex/扣子 上传用，一句话唤起
 ├── references/
@@ -139,7 +154,7 @@
 能，但会**降级**：人群段只列障碍不排序、并标"排序不可信"。想要可信排序，先按 `references/真实数据采集.md`（第⓪段）把真数据取到手。模型不替你编人口构成。
 
 **Q：这个文件夹安全吗？为什么 Windows 可能提示"未知发布者"？**
-本包是纯文本方法论（markdown + txt + yaml），无任何可执行程序。请确认从可信分享者处获取。
+装进 skill 目录的内容是纯文本方法论（markdown + txt + yaml）。包里另有几个**透明、可自行打开审阅**的安装脚本（`install*.sh/ps1`、`bin/cli.js`），它们只做一件事：把这些文本文件复制到 `~/.claude/skills/` 下，不联网回传、不读你的其它文件。建议从可信来源获取，并在运行前自行过目脚本内容。
 
 ---
 

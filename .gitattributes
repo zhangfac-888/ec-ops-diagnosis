@@ -1,5 +1,7 @@
 # 安装脚本换行符跨平台锁定
 *.sh   text eol=lf
+# Node CLI 带 shebang，必须 LF，否则在 mac/Linux 上无法执行
+bin/cli.js text eol=lf
 install.ps1 -text
 # 其余文本按各自平台
 *.md   text
