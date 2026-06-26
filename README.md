@@ -1,4 +1,4 @@
-# 电商运营诊断 Skill v1.2.0
+# 电商运营诊断 Skill v1.3.0
 
 > 一个入口走完电商运营全链路诊断：**主图 → 详情页 → 人群 → 数据 → 运营策略**。
 >
@@ -18,23 +18,26 @@
 
 ## 安装
 
-### 一键安装（CLI · 推荐）
+### 🚀 一行命令安装（推荐 · 无需 git/手动解压）
 
-解压后，在该文件夹里跑一条命令，自动装进 Claude Code 的 skills 目录：
+复制一条命令，直接下载并装进 Claude Code 的 skills 目录：
 
-- **Windows**：在文件夹里打开 PowerShell，运行
-  ```
-  powershell -ExecutionPolicy Bypass -File .\install.ps1
-  ```
 - **macOS / Linux**：
   ```
-  bash install.sh
+  curl -fsSL https://raw.githubusercontent.com/zhangfac-888/ec-ops-diagnosis/main/install-remote.sh | bash
+  ```
+- **Windows（PowerShell）**：
+  ```
+  irm https://raw.githubusercontent.com/zhangfac-888/ec-ops-diagnosis/main/install-remote.ps1 | iex
   ```
 
-装好后重启 Claude Code，说「跑电商运营诊断」即可。
+装完重启 Claude Code，说「跑电商运营诊断」即可。
 
-> 有私库访问权的，也能一条龙克隆+安装：
-> `gh repo clone zhangfac-888/ec-ops-diagnosis && cd ec-ops-diagnosis && bash install.sh`（Windows 把末尾换成 `powershell -ExecutionPolicy Bypass -File .\install.ps1`）
+### 本地脚本安装（已下载 zip / 已 clone 后）
+
+在解压或克隆后的文件夹里运行：
+- **Windows**：`powershell -ExecutionPolicy Bypass -File .\install.ps1`
+- **macOS / Linux**：`bash install.sh`
 
 ### 手动安装（Claude Code）
 

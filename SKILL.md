@@ -1,6 +1,6 @@
 ---
 name: 电商运营诊断
-version: 1.2.0
+version: 1.3.0
 author: 张发财
 contact:
   公众号: 财哥的电商思维
