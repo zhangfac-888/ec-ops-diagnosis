@@ -1,6 +1,6 @@
 {
   "name": "ec-ops-diagnosis",
-  "version": "1.6.0",
+  "version": "1.8.0",
   "description": "电商运营诊断 Skill 安装器：主图/详情页/人群/数据/运营策略 五段总编排诊断，一条命令装进 Claude Code 的 skills 目录。",
   "bin": {
     "ec-ops-diagnosis": "bin/cli.js"
