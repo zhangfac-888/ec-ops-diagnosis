@@ -1,5 +1,7 @@
 # 电商运营诊断 Skill v1.8.0 · 含电商运营助手「张发财」
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 > 一个入口走完电商运营全链路诊断：**主图 → 详情页 → 人群 → 数据 → 运营策略**。
 >
 > 核心约束：**没有真实数据不硬给结论，全程不编百分比、不预测业绩、来源必标。**
@@ -131,7 +133,8 @@ npx ec-ops-diagnosis
 ├── SKILL.md                  # 总编排入口（必读，先读它）
 ├── AGENT.md                  # 电商运营助手·张发财：角色/三模式/决策卡/记忆边界（实例层）
 ├── README.md                 # 本文件
-├── LICENSE.txt               # 使用许可
+├── LICENSE                   # CC BY-NC 4.0 英文法律全文
+├── LICENSE.txt               # 中文许可说明与署名规范
 ├── agents/
 │   └── openai.yaml           # Codex/扣子 上传用，一句话唤起
 ├── references/
@@ -175,9 +178,19 @@ npx ec-ops-diagnosis
 
 淘宝、天猫、京东、拼多多、抖音电商、小红书电商等所有图文电商。方法论是平台无关的电商通识。
 
+## 许可协议
+
+本项目采用 **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)**（署名-非商业性使用 4.0 国际）授权：
+
+- ✅ 免费使用、修改、分享、二次创作
+- ⚠️ **署名（BY）**：须标注作者「张发财」并注明来源，改编版请标「基于张发财《电商运营诊断》改编」
+- 🚫 **非商业（NC）**：禁止商用——不得打包成付费课程/付费社群权益出售、不得作为付费咨询或代运营的交付物售卖、不得用于盈利性培训
+
+英文法律全文见 [`LICENSE`](LICENSE)，中文说明与署名规范见 [`LICENSE.txt`](LICENSE.txt)。
+
 ## 联系作者 / 反馈
 
 - **微信公众号**：财哥的电商思维
 - **小红书**：张发财的资料库
 
-欢迎反馈踩坑、品类适配建议。使用前请阅读 LICENSE.txt。
+欢迎反馈踩坑、品类适配建议。
