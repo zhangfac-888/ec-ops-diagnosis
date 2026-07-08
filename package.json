@@ -12,10 +12,13 @@
   "files": [
     "bin/",
     "SKILL.md",
+    "AGENT.md",
     "README.md",
+    "LICENSE",
     "LICENSE.txt",
     "agents/",
     "references/",
+    "data/",
     "子技能/"
   ],
   "keywords": [

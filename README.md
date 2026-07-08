@@ -37,6 +37,8 @@ npx ec-ops-diagnosis
 
 它会把 skill 装进 `~/.claude/skills/电商运营诊断/`（覆盖式安装，自动清掉旧版本残留文件）。加 `--dry-run` 可先预览要装哪些文件。
 
+> 维护者发布 npm 前请确认 `package.json.files` 包含 `AGENT.md`、`LICENSE`、`LICENSE.txt`、`data/`、`agents/`、`references/`、`子技能/` 与 `SKILL.md`，否则 npm 打包可能漏掉实例层、经验库模板或授权文件。
+
 ### 🚀 一行命令安装（无 Node 也能用）
 
 复制一条命令，直接下载并装进 Claude Code 的 skills 目录：
@@ -186,7 +188,11 @@ npx ec-ops-diagnosis
 - ⚠️ **署名（BY）**：须标注作者「张发财」并注明来源，改编版请标「基于张发财《电商运营诊断》改编」
 - 🚫 **非商业（NC）**：禁止商用——不得打包成付费课程/付费社群权益出售、不得作为付费咨询或代运营的交付物售卖、不得用于盈利性培训
 
-英文法律全文见 [`LICENSE`](LICENSE)，中文说明与署名规范见 [`LICENSE.txt`](LICENSE.txt)。
+**适用范围**：CC BY-NC 4.0 主要适用于本项目的文档、方法论、提示词、模板、原型卡片、案例结构与 `AGENT.md` 角色层说明。
+
+**代码边界**：仓库中的安装脚本与 CLI（如 `bin/cli.js`、`install*.sh`、`install*.ps1`）仅用于把 skill 文件复制到本地 Claude Code skills 目录。Creative Commons 官方不建议把 CC 协议当作软件开源许可证；除非文件头另有声明，请不要把本项目的 CC BY-NC 4.0 理解为对安装代码的通用软件开源授权。
+
+完整法律文本见 [`LICENSE`](LICENSE)，中文说明与署名规范见 [`LICENSE.txt`](LICENSE.txt)。如中文说明与法律文本存在差异，以 CC BY-NC 4.0 官方法律文本为准。
 
 ## 联系作者 / 反馈
 
